@@ -4,13 +4,13 @@ public class Produto {
     private long id;
     private String marca;
     private String modelo;
-    private double preco;
+    private float preco;
 
-    public Produto(long id, String marca, String modelo, double preco) {
-        this.setId(id);
-        this.setMarca(marca);
-        this.setModelo(modelo);
-        this.setPreco(preco);
+    public Produto(long id, String marca, String modelo, float preco) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.preco = preco;
     }
 
     public long getId() {
@@ -37,11 +37,11 @@ public class Produto {
         this.modelo = modelo;
     }
 
-    public double getPreco() {
+    public float getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(float preco) {
         this.preco = preco;
     }
 }

@@ -25,11 +25,27 @@
         android:layout_height="wrap_content"
         android:text="Cliente" />
 
+    <Spinner
+        android:id="@+id/spClienteId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="17dp" />
+
     <TextView
         android:id="@+id/textView11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Produto" />
+
+    <Spinner
+        android:id="@+id/spProdutoId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></Spinner>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="17dp" />
 
     <TextView
         android:id="@+id/textView12"
@@ -37,20 +53,32 @@
         android:layout_height="wrap_content"
         android:text="Valor mínimo" />
 
+    <EditText
+        android:id="@+id/etValorMinimo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Valor máximo" />
 
+    <EditText
+        android:id="@+id/etValorMaximo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="330dp" />
+        android:layout_height="100dp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/btnEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="onClickEnviaEmail"
+        android:enabled="false"
         android:text="Enviar email" />
 
     <Space
@@ -58,8 +86,10 @@
         android:layout_height="11dp" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/btnTelefone"
         android:layout_width="match_parent"
+        android:enabled="false"
+        android:onClick="onClickLigar"
         android:layout_height="wrap_content"
         android:text="Telefonar" />
 

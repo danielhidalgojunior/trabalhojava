@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ClienteDAO extends SQLiteOpenHelper{
 
-    private static  final  String BANCO_DADOS = "BDSistemas3";
+    private static  final  String BANCO_DADOS = "BDSistemas5";
     private static  final  String TABELA = "Cliente";
     private  static  final  int VERSION = 1;
 

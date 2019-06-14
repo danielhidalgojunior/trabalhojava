@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ProdutoDAO extends SQLiteOpenHelper{
 
-    private static  final  String BANCO_DADOS = "BDSistemas";
+    private static  final  String BANCO_DADOS = "BDSistema5";
     private static  final  String TABELA = "Produto";
     private  static  final  int VERSION = 1;
 
@@ -33,7 +33,7 @@ public class ProdutoDAO extends SQLiteOpenHelper{
                 " INTEGER PRIMARY KEY NOT NULL, " +
                 CAMPO_MARCA + " TEXT, " +
                 CAMPO_MODELO + " TEXT, "+
-                CAMPO_PRECO + " TEXT);";
+                CAMPO_PRECO + " FLOAT);";
 
         db.execSQL(sql);
     }
@@ -111,7 +111,7 @@ public class ProdutoDAO extends SQLiteOpenHelper{
                 produto = new Produto(cursor.getInt(cursor.getColumnIndex(CAMPO_ID)),
                         cursor.getString(cursor.getColumnIndex(CAMPO_MARCA)),
                         cursor.getString(cursor.getColumnIndex(CAMPO_MODELO)),
-                        cursor.getDouble(cursor.getColumnIndex(CAMPO_PRECO)));
+                        cursor.getFloat(cursor.getColumnIndex(CAMPO_PRECO)));
                 lista.add(produto);
             } while (cursor.moveToNext());
         }
